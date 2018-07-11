@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+
+<style>
+body{ background-color:#2F2F2F}
+#stage{ margin-left: auto; margin-right: auto; display: block; margin-top: 0px; }
+button{ position:absolute;width:80px; height:80px; border-radius: 40px; font-size:28px; border:1px;margin:50px;z-index:-999}
+</style>
+
+</head>
+<body>
+
+<canvas id="stage" width="400" height="360"></canvas>
+
+<script src="js/game.js"></script>
+<script src="js/mario.js"></script>
+<script src="js/app.js"></script>
+<script>
+	var preHandler=function(e){e.preventDefault();}// 注意此处代码片段必须这样提出来已保证传入下边两个事件的处理程序一样才生效，分别写到事件处理程序中不生效。
+	document.addEventListener('touchmove', preHandler,false);//阻止默认滑动事件
+</script>
+
+</body>
+</html>
